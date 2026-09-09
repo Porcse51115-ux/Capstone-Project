@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Sheaffer — Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MS</a>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Featured</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="projects.html">All Work</a></li>
+                <li><a href="https://github.com/Porcse51115-ux" class="nav-cta">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+        <section class="page-header">
+            <h1>All Projects</h1>
+            <p>Everything I've built, broken, and shipped.</p>
+        </section>
+
+        <section class="section">
+            <div class="project-detail">
+                <div class="detail-header">
+                    <div class="card-tag">SaaS Platform</div>
+                    <h2>TruckOps AI</h2>
+                </div>
+                <div class="detail-body">
+                    <p>
+                        TruckOps AI is a 15-module SaaS platform designed for small
+                        trucking carriers running 1–15 trucks. It covers the full
+                        back-office workflow: dispatch, invoicing, IFTA fuel tax
+                        reporting, load profitability analysis, and DOT compliance
+                        tracking.
+                    </p>
+                    <p>
+                        This project exists because I lived the problem. As a
+                        dry-bulk tanker operator, I watched small carriers drown in
+                        spreadsheets and disconnected tools. TruckOps AI is the
+                        platform I wished existed — built by someone who actually
+                        understands the domain.
+                    </p>
+                    <h3>Key Technical Decisions</h3>
+                    <ul>
+                        <li>Anthropic Claude API for intelligent document parsing and compliance alerts</li>
+                        <li>Supabase for auth, database, and real-time subscriptions</li>
+                        <li>Module-based architecture so carriers can adopt features incrementally</li>
+                    </ul>
+                    <div class="card-tech">
+                        <span>Next.js</span>
+                        <span>Supabase</span>
+                        <span>Claude API</span>
+                        <span>Vercel</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="project-detail">
+                <div class="detail-header">
+                    <div class="card-tag">AI Video Production</div>
+                    <h2>CrimeCast Studio</h2>
+                </div>
+                <div class="detail-body">
+                    <p>
+                        CrimeCast Studio is a vertical AI video production platform
+                        built specifically for true crime content. It handles the
+                        full pipeline: research and script generation, AI voice
+                        cloning, image and video generation, automated rendering,
+                        and multi-platform publishing.
+                    </p>
+                    <p>
+                        The production site runs at wrongmancases.com. The entire
+                        content pipeline — from source research through final
+                        render — is orchestrated through a single Next.js
+                        application backed by Supabase.
+                    </p>
+                    <h3>Production Stack</h3>
+                    <ul>
+                        <li>fal.ai (Kling, Seedance, FLUX) for AI image and video generation</li>
+                        <li>ElevenLabs for voice cloning and narration</li>
+                        <li>Remotion + Lambda for server-side video rendering at scale</li>
+                        <li>Cloudflare R2 for asset storage and delivery</li>
+                    </ul>
+                    <div class="card-tech">
+                        <span>Next.js 15</span>
+                        <span>Supabase</span>
+                        <span>fal.ai</span>
+                        <span>ElevenLabs</span>
+                        <span>Remotion</span>
+                        <span>Cloudflare R2</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="project-detail">
+                <div class="detail-header">
+                    <div class="card-tag">Internal Tooling</div>
+                    <h2>Voss Studio</h2>
+                </div>
+                <div class="detail-body">
+                    <p>
+                        Voss Studio is a private content generation pipeline built
+                        as internal tooling for an AI persona production workflow.
+                        It replicates studio-grade video and voice production
+                        capabilities in a single application.
+                    </p>
+                    <p>
+                        This isn't a public product — it's infrastructure. The
+                        value is in the pipeline architecture: content goes in as
+                        a brief, comes out as publishable media, with human review
+                        gates at each stage.
+                    </p>
+                    <div class="card-tech">
+                        <span>Next.js</span>
+                        <span>Supabase</span>
+                        <span>AI Pipeline</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="project-detail">
+                <div class="detail-header">
+                    <div class="card-tag">Cybersecurity</div>
+                    <h2>HRS Fast Track Assessment</h2>
+                </div>
+                <div class="detail-body">
+                    <p>
+                        A security assessment for a friend's emergency services
+                        application — a Philly Fire Rescue / hospital bed-placement
+                        tool where security failures could have life-safety
+                        consequences.
+                    </p>
+                    <p>
+                        This was a real engagement, not a class exercise. I
+                        conducted the assessment, documented findings, and
+                        delivered actionable remediation steps for a system
+                        handling sensitive emergency response data.
+                    </p>
+                    <div class="card-tech">
+                        <span>Security Audit</span>
+                        <span>Vulnerability Assessment</span>
+                        <span>Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-cta" style="text-align: center;">
+                <a href="index.html" class="btn btn-outline">Back to home</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Matt Sheaffer. Built from scratch — no templates, no frameworks.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

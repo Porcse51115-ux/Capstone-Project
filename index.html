@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Sheaffer — Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MS</a>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="projects.html">All Work</a></li>
+                <li><a href="https://github.com/Porcse51115-ux" class="nav-cta">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-label">Hi, I'm Matt Sheaffer</p>
+                <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
+                <p class="hero-sub">
+                    I spent years behind the wheel of a pneumatic dry-bulk tanker.
+                    Now I build the software I wish I'd had on the road.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">See my work</a>
+                    <a href="projects.html" class="btn btn-outline">All projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT / JOURNEY ===== -->
+        <section id="about" class="section">
+            <h2 class="section-title">The Road to Code</h2>
+            <p class="section-intro">
+                From hauling flour in a 80,000-lb tanker to shipping code on Vercel —
+                my path wasn't traditional, but every mile taught me something I use
+                when I build software today.
+            </p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Dry-Bulk Tanker Operations</h3>
+                        <p>
+                            Operated pneumatic trailers hauling powder products,
+                            ran PTO drying procedures, managed DOT compliance
+                            across jurisdictions. Learned that the hardest problems
+                            aren't technical — they're operational.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>First Lines of Code</h3>
+                        <p>
+                            Started automating side tasks and building small IT
+                            projects. Realized the trucking industry was full of
+                            problems that better software could solve — and nobody
+                            was building it.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>AI Engineering + IT Degrees</h3>
+                        <p>
+                            Enrolled in associate programs for AI Engineering and IT.
+                            Started building full-stack applications with Next.js,
+                            Supabase, and Anthropic's Claude API while studying.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker active"></div>
+                    <div class="timeline-content">
+                        <h3>Building for Real Users</h3>
+                        <p>
+                            Now developing production SaaS tools, AI content
+                            pipelines, and security assessments — with the goal
+                            of landing a salaried AI application engineering role.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" class="section section-alt">
+            <h2 class="section-title">Featured Work</h2>
+            <p class="section-intro">
+                Real tools built for real problems — not tutorials or toy apps.
+            </p>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="card-tag">SaaS Platform</div>
+                    <h3>TruckOps AI</h3>
+                    <p>
+                        A 15-module platform for small carriers covering dispatch,
+                        invoicing, IFTA reporting, load profitability, and DOT
+                        compliance. My strongest portfolio anchor — built on
+                        domain expertise most developers don't have.
+                    </p>
+                    <div class="card-tech">
+                        <span>Next.js</span>
+                        <span>Supabase</span>
+                        <span>Claude API</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-tag">AI Video</div>
+                    <h3>CrimeCast Studio</h3>
+                    <p>
+                        A vertical AI video production platform for true crime
+                        content. Full pipeline from script generation through
+                        voice cloning to automated rendering and publishing.
+                    </p>
+                    <div class="card-tech">
+                        <span>Next.js 15</span>
+                        <span>fal.ai</span>
+                        <span>ElevenLabs</span>
+                        <span>Remotion</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-tag">Internal Tool</div>
+                    <h3>Voss Studio</h3>
+                    <p>
+                        A private content generation pipeline replicating
+                        studio-grade video and voice production for an AI
+                        persona — built as internal tooling, not a public product.
+                    </p>
+                    <div class="card-tech">
+                        <span>Next.js</span>
+                        <span>Supabase</span>
+                        <span>AI Pipeline</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section-cta">
+                <a href="projects.html" class="btn btn-outline">View all projects</a>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" class="section">
+            <h2 class="section-title">What I Work With</h2>
+
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                        <span>Python</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Frameworks + Tools</h3>
+                    <div class="skill-tags">
+                        <span>Next.js</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Supabase</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span>Vercel</span>
+                        <span>AWS</span>
+                        <span>GitHub</span>
+                        <span>Cloudflare</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Domain Knowledge</h3>
+                    <div class="skill-tags">
+                        <span>DOT Compliance</span>
+                        <span>IFTA Reporting</span>
+                        <span>Trucking Ops</span>
+                        <span>Cybersecurity</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="section section-alt">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-intro">
+                Looking for an AI application engineering role, open to freelance
+                projects, and always happy to talk trucking tech.
+            </p>
+            <div class="contact-links">
+                <a href="https://github.com/Porcse51115-ux" class="btn btn-primary">GitHub</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Matt Sheaffer. Built from scratch — no templates, no frameworks.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
