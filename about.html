@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Sheaffer — About &amp; Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MS</a>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="https://github.com/Porcse51115-ux" class="nav-cta">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+        <section class="page-header">
+            <h1>About Me</h1>
+            <p>The short version of a long road.</p>
+        </section>
+
+        <!-- Background -->
+        <section class="section">
+            <div class="about-content">
+                <h2 class="section-title">From the Cab to the Terminal</h2>
+                <p>
+                    I spent years operating pneumatic dry-bulk tankers — hauling flour,
+                    cement, and other powder products across the country. I ran PTO
+                    drying procedures, managed DOT compliance across multiple
+                    jurisdictions, and learned firsthand that the hardest problems in
+                    trucking aren't on the road. They're in the back office.
+                </p>
+                <p>
+                    That's what pulled me into software. I kept seeing workflows held
+                    together by spreadsheets and phone calls — dispatch, invoicing,
+                    IFTA reporting — that better tooling could automate entirely. So
+                    I started building it myself.
+                </p>
+                <p>
+                    I'm now pursuing associate degrees in AI Engineering and IT, with
+                    a goal of landing a salaried AI application engineering role while
+                    keeping independent SaaS development going on the side. Everything
+                    I build draws on real operational experience that most developers
+                    don't have.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section section-alt">
+            <h2 class="section-title">What I Work With</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                        <span>Python</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Frameworks + Tools</h3>
+                    <div class="skill-tags">
+                        <span>Next.js</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Supabase</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span>Vercel</span>
+                        <span>AWS</span>
+                        <span>GitHub</span>
+                        <span>Cloudflare</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Domain Knowledge</h3>
+                    <div class="skill-tags">
+                        <span>DOT Compliance</span>
+                        <span>IFTA Reporting</span>
+                        <span>Trucking Ops</span>
+                        <span>Cybersecurity</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-intro">
+                Looking for an AI application engineering role, open to freelance
+                projects, and always happy to talk trucking tech.
+            </p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+                <fieldset>
+                    <legend>Send a Message</legend>
+
+                    <div class="form-group">
+                        <label for="full-name">Name <span class="required">*</span></label>
+                        <input type="text" id="full-name" name="full-name" required
+                               aria-required="true" aria-describedby="full-name-error">
+                        <span id="full-name-error" class="error-msg" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required
+                               aria-required="true" aria-describedby="email-error">
+                        <span id="email-error" class="error-msg" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject <span class="required">*</span></label>
+                        <input type="text" id="subject" name="subject" required
+                               aria-required="true" aria-describedby="subject-error">
+                        <span id="subject-error" class="error-msg" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" required
+                                  aria-required="true" aria-describedby="message-error"></textarea>
+                        <span id="message-error" class="error-msg" role="alert"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </fieldset>
+            </form>
+
+            <div id="form-success" class="success-msg" hidden>
+                <h3>Message sent!</h3>
+                <p>Thanks for reaching out. This form is a demo for a class project, but the interest is real.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Matt Sheaffer. Built from scratch — no templates, no frameworks.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

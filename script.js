@@ -101,3 +101,89 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
         }
     });
 });
+
+
+/* ----------------------------------------------------------
+   4. FORM VALIDATION (About/Contact page)
+   Intercepts submit with preventDefault(), shows DOM errors,
+   validates email format, clears errors on input.
+   Keyboard accessible — all native form elements.
+   ---------------------------------------------------------- */
+
+var contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    var fields = [
+        {
+            id: 'full-name',
+            validate: function (val) { return val !== ''; },
+            msg: 'Please enter your name.'
+        },
+        {
+            id: 'email',
+            validate: function (val) {
+                if (val === '') return false;
+                return val.indexOf('@') !== -1 && val.indexOf('.') !== -1;
+            },
+            msg: 'Please enter a valid email address.'
+        },
+        {
+            id: 'subject',
+            validate: function (val) { return val !== ''; },
+            msg: 'Please enter a subject.'
+        },
+        {
+            id: 'message',
+            validate: function (val) { return val !== ''; },
+            msg: 'Please enter a message.'
+        }
+    ];
+
+    // Real-time error clearing as user types
+    fields.forEach(function (field) {
+        var input = document.getElementById(field.id);
+        if (input) {
+            input.addEventListener('input', function () {
+                if (field.validate(input.value.trim())) {
+                    clearFormError(input, field.id);
+                }
+            });
+        }
+    });
+
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var allValid = true;
+
+        fields.forEach(function (field) {
+            var input = document.getElementById(field.id);
+            var value = input.value.trim();
+
+            if (!field.validate(value)) {
+                showFormError(input, field.id, field.msg);
+                allValid = false;
+            } else {
+                clearFormError(input, field.id);
+            }
+        });
+
+        if (allValid) {
+            contactForm.hidden = true;
+            document.getElementById('form-success').hidden = false;
+        }
+    });
+}
+
+function showFormError(input, id, msg) {
+    var errorSpan = document.getElementById(id + '-error');
+    if (errorSpan) errorSpan.textContent = msg;
+    input.setAttribute('aria-invalid', 'true');
+    input.classList.add('input-error');
+}
+
+function clearFormError(input, id) {
+    var errorSpan = document.getElementById(id + '-error');
+    if (errorSpan) errorSpan.textContent = '';
+    input.removeAttribute('aria-invalid');
+    input.classList.remove('input-error');
+}
